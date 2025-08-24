@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "protv-freelance-jobs",
   "builds": [
     {
       "src": "frontend/package.json",
@@ -12,13 +11,16 @@
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/frontend/build/static/$1"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/frontend/build/favicon.ico"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/frontend/$1"
+      "dest": "/frontend/build/index.html"
     }
-  ],
-  "build": {
-    "env": {
-      "REACT_APP_BACKEND_URL": "https://protv-freelance-jobs.vercel.app"
-    }
-  }
+  ]
 }
