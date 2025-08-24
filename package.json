@@ -1,0 +1,9 @@
+{
+  "name": "protv-freelance-jobs",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build && cp -r build/* ../public/",
+    "start": "cd frontend && npm start"
+  },
+  "devDependencies": {}
+}
